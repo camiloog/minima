@@ -15,13 +15,19 @@ steps:
     versionSpec: '>= 2.5'
 
 - script: script/bootstrap
-  displayName: 'bundle install'
+  displayName: 'boostrap environment'
 
 - script: script/cibuild
-  displayName: 'gem build'
+  displayName: 'build theme'
+
+- task: CopyFiles@2
+  displayName: 'stage artifact'
+  inputs:
+    contents: $(Build.SourcesDirectory)/minimalized*.gem
+    targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish gem'
+  displayName: 'publish artifact'
   inputs:
-    PathtoPublish: ./minimalized-0.1.0.gem
-    ArtifactName: gemfile
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: minimalized
