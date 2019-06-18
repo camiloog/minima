@@ -7,8 +7,6 @@
 
 *Minimalized* is a fork of the *[Minima](https://github.com/jekyll/minima/blob/master/README.md)* theme by Jekyll. It's goal is to have some style customizations under the *Material Design* gidelines keeping the robustness and functionality of the *Minima* theme.
 
-![minimalized theme preview](/screenshot.png)
-
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/camiloog/minimalized. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
